@@ -1,0 +1,575 @@
+/* Reset margin and padding for body and html */
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box; /* Ensure padding and borders are included in width and height */
+}
+
+/* Header Navigation */
+nav {
+    display: flex;
+    justify-content: center; /* Center align the entire navigation */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    align-items: center;
+    padding: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border: none; /* Ensure there's no border around the navigation */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    left: 20px; /* Keep the logo on the left side */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px; /* This controls the spacing between buttons */
+    font-size: small;
+}
+
+nav ul li:first-child {
+    margin-left: 0; /* Remove left margin for the first item */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px; /* Adds space for the underline */
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+/* Green underline on hover */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease; /* Smooth transition for underline */
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Contact Button Specific Style */
+.button-contact {
+    border: 1px solid white;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    margin-left: 20px; /* Ensure spacing between the buttons */
+}
+
+.button-contact:hover {
+    background-color: white;
+    color: green;
+}
+
+
+
+.hero {
+    background-image: url('city.jpg');
+    background-size: cover;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the left */
+    text-align: left; /* Align text to the left */
+    color: white;
+    margin-top: 60px;
+    padding-left: 90px; /* Add some left padding for spacing */
+}
+
+.hero h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 48px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.hero .button {
+    background-color: green;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.hero .button:hover {
+    background-color: darkgreen; /* Change the background color on hover */
+    color: #e0e0e0; /* Slightly change the text color on hover */
+}
+
+
+.overview {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #fff;
+    text-align: center;
+    padding-right: 140px;
+    padding-left: 140px;
+}
+
+.overview p {
+    font-size: large;
+    line-height: 1.6;
+}
+
+.overview .whyover {
+    padding-top: 30px;
+    font-weight: bolder;
+    font-size: 34px; /* Larger font size for prominence */
+    color: green;
+    text-transform: uppercase;
+}
+
+.overview .product-image {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 300px;
+    position: relative;
+    
+}
+
+.overview .product-image img {
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.525);
+    padding-top: 30px;
+    border-radius: 15px;
+    border-color: green;
+    border-width: 10px;
+}
+
+.overview .product-image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Wrapper to center the entire solutions section */
+.solutions-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #f5f5f5;
+}
+
+/* Solutions section */
+.solutions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    max-width: 1200px;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out , transform 0.6s ease-out;
+    transition: transform 0.6s, box-shadow 0.3s;
+}
+
+.solutions:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.solutions.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Text alignment */
+.solutions .text {
+    flex: 1;
+    padding-right: 60px;
+    padding-left: 80px;
+    text-align: left;
+}
+
+.solutions .text h2 {
+    font-size: xx-large;
+    color: green;
+    margin-bottom: 15px;
+}
+
+.solutions .text p {
+    font-size: large;
+    color: #333;
+    line-height: 1.6;
+}
+
+.solutions .text a {
+    font-size: large;
+    text-decoration: underline;
+    color: black;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Image styling */
+.solutions .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.solutions .image img {
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the second section has the image on the right */
+.solutions.reverse {
+    flex-direction: row-reverse;
+}
+
+
+.services {
+    padding: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: large;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: xx-large;
+    color: green;
+    margin-bottom: 40px;
+}
+.services h3 {
+    text-align: center;
+    font-size: x-large;
+    color: green;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+}
+.service-cards .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card {
+    width: 30%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px green(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid rgb(176, 173, 173); /* Add green border */
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.card img {
+    max-width: 100%;
+    height: 60%;
+    margin-bottom: 15px;
+}
+
+.reviews {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #f5f5f5;
+    padding: 30px;
+    align-items: flex-start;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.reviews h2 {
+    font-size: xx-large;
+    text-align: center;
+    margin-bottom: 30px;
+    color: green;
+}
+.review {
+    padding: 15px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.review-grid {
+    font-size: large;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.client-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.review-header p {
+    font-weight: bold;
+    font-size: large;
+    color: #000000;
+    text-decoration: bold;
+}
+
+.review span {
+    margin-top: 10px;
+    color: #ffc107;
+    text-align: right;
+}
+
+.review:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+    background-color: #4CAF50;
+}
+
+
+
+/* Team Members Section */
+
+.team {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: green;
+    font-weight: bold;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease, border-color 0.3s, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.team-member img {
+    width: 100%;
+    height: 300px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the area, cropping if necessary */
+    border-radius: 10px; /* Optional: matches the border radius of the card */
+}
+
+.team-member p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center; /* Ensures the text is centered under the image */
+}
+
+.team-member:hover {
+    transform: scale(1.05); /* Adjusted scale for a more subtle effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Visible state: elements are fully visible and in place */
+.team-member.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Order Section */
+.order {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #000000;
+    color: white;
+    padding: 50px 20px;
+    font-size: large;
+    padding-right: 140px;
+    padding-left: 140px;
+    text-align: center;
+}
+
+.order-now {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.order-now:hover {
+    background: green;
+    color: white;
+    background-color: green;
+    transform: scale(1.05);
+}
+
+.order-now:active {
+    transform: scale(0.95);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.contact-section {
+    position: relative;
+    color: white;
+    text-align: left;
+}
+
+.map-container {
+    height: 450px;
+    width: 100%;
+    background-color: #333; /* Placeholder color before the map loads */
+}
+
+.form-overlay {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 30%;
+}
+
+.form-overlay h2 {
+    margin-bottom: 20px;
+    color: green;
+}
+
+.form-overlay form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-overlay label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black;
+}
+
+.form-overlay input,
+.form-overlay textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-overlay button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
