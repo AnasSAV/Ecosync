@@ -14,6 +14,9 @@ We have developed a **website** to showcase Ecosync's innovative features and fu
 7. **Flexible Mounting Options**: Designed for versatile integration into any hotel room setup with wall-mount or desk options.
 8. **Quick Setup**: Ecosync is compatible with most A/C models, ensuring fast and easy installation for immediate energy savings.
 
+## Visit Our Website
+Explore Ecosync’s innovative features in-depth and see how it can transform energy management in hotels while enhancing the guest experience at anassav.github.io/Ecosync.
+
 ## Running the Project
 To run the project, follow these steps:
 
@@ -25,5 +28,4 @@ To run the project, follow these steps:
   cd Ecosync
 - **Open the Project in Your Browser:**  Open index.html in your web browser to start exploring Ecosync's features.
 
-#### Visit Our Website
-Explore Ecosync’s innovative features in-depth and see how it can transform energy management in hotels while enhancing the guest experience at anassav.github.io/Ecosync.
+
